@@ -4,13 +4,8 @@
  * and open the template in the editor.
  */
 package Exercise1;
-import Exercise3.Customer;
-import Exercise3.LandL_bank;
 import java.util.Scanner;
 import java.util.Arrays;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
 
 
 /**
