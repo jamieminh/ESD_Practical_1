@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exercise1;
-import Exercise2.Customer;
-import Exercise2.LandL_bank;
+package practical;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.io.File;
