@@ -3,72 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practical;
-import java.util.Scanner;
-import java.util.Arrays;
+package Exercise3;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-
+import java.util.Scanner;
 
 /**
  *
- * @author WIN 10
+ * @author zZMerciZz
  */
-public class Driver {
+public class Bank {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        // Exercise 1:
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter triangle lengths, separated by a space: ");
-        String lengths = input.nextLine();
-        
-        int[] lens = Arrays.stream(lengths.split(" ")).mapToInt(Integer::parseInt).toArray();
-        
-        Triangle triangle1 = new Triangle(lens[0], lens[1], lens[2]);
-        System.out.println(triangle1.evalTriangle());
-        
-        // Exercise 2:
-        ArrayList<Integer> nums = new ArrayList<Integer>();
-        int[] rangeOccur = new int[10];
-        
-        try {
-            File myFile = new File("src/practical/grades.txt");
-            Scanner fileReader = new Scanner(myFile);
-            while (fileReader.hasNextLine()) {
-                int data = Integer.parseInt(fileReader.nextLine());
-                nums.add(data);
-            }
-            fileReader.close();
-        }
-        catch(FileNotFoundException e) {
-            System.err.println(e);
-        }
-        System.out.println(Arrays.toString(nums.toArray()));
-        
-        for (int i=0; i<nums.size(); i++) {
-            int range = nums.get(i) / 10;;
-            if (nums.get(i) % 10 == 0) {
-                range-- ;
-            }
-            rangeOccur[range] += 1;
-        }
-        
-        System.out.println(Arrays.toString(rangeOccur));
-        
-        for (int i=0; i<10; i++) {
-//            char[] chars = new char[rangeOccur[i]];
-//            Arrays.fill(chars, '*');
-//            String str = new String(chars);
-            String str = new String(new char[rangeOccur[i]]).replace("\0", "*");
-            System.out.println( i+"1 - " + (i+1) + "0   | " + str);
-        }
-        
-        
+        // TODO code application logic here
         // Exercise 3
         LandL_bank bank = new LandL_bank();
 
         try {
-            File accounts = new File("src/practical/accounts.txt");
+            File accounts = new File("src/Exercise3/accounts.txt");
             Scanner reader = new Scanner(accounts);
             while (reader.hasNextLine()) {
                 String[] info = reader.nextLine().split(" ");
@@ -138,11 +94,6 @@ public class Driver {
             
         }
         while (option != 0);
-        
-        
-        
     }
-    
-    
     
 }
